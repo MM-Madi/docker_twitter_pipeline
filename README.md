@@ -8,7 +8,7 @@ This repository contains one of my projects as a data science student taken from
 **Container 5** - posts the tweet and its sentiment in a slack-chanel-bot<br />
 
 
-The repository includes the following folders and files:
+<ins>The repository includes the following folders and files:</ins>
 * docker_compose.yml - docker containers composition
 * tweepy_collector:<br />
   docker_file<br />
