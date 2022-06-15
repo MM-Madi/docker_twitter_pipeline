@@ -1,6 +1,6 @@
 # twitter_docker_pipeline
 
-This repository contains one of my projects as a data science student taken from my student repo (copy of finalized files), in it i developed a 5 docker container pipeline with the following functions:<br />
+This repository contains one of my projects as a data science student where I developed a 5 docker container pipeline with the following functions:<br />
 **Container 1** - uses the twitter-api to collect tweets with a specific hashtag<br />
 **Container 2** - stores the tweets in a mongoDB data container<br />
 **Container 3** - an ETL that extracts the tweets, conducts sentiment analysis, and re-stores them with their scores in a postGres data base<br />
@@ -9,16 +9,16 @@ This repository contains one of my projects as a data science student taken from
 
 
 <ins>The repository includes the following folders and files:</ins>
-* docker_compose.yml - docker containers composition
+* **docker_compose.yml** - docker containers composition
 * tweepy_collector:<br />
-  docker_file<br />
-  requierments.txt<br />
-  tweepy_collector - script that uses the twitter-api to collect tweets with the hashtag Ukraine and stores them in a mongoDB database
+  **docker_file**<br />
+  **requierments.txt**<br />
+  **tweepy_collector.py** - script that uses the twitter-api to collect tweets with the hashtag Ukraine and stores them in a mongoDB database
 * etl:<br />
-  docker_file<br />
-  requierments<br />
-  etl - script that connects to mongoDB data-base, extracts tweets, conducts sentiment analysis, and re-stores them in a postGres database
+  **docker_file**<br />
+  **requierments,txt**<br />
+  **etl.py** - script that connects to mongoDB data-base, extracts tweets, conducts sentiment analysis, and re-stores them in a postGres database
 * slackbot:<br />
-  docker_file<br />
-  requierments<br />
-  slackbot - script that connects to postGres database, extracts a random tweet and posts it to a slack-bot 
+  **docker_file**<br />
+  **requierments.txt**<br />
+  **slackbot.py** - script that connects to postGres database, extracts a random tweet and posts it to a slack-bot 
