@@ -1,0 +1,40 @@
+version: '3'
+services:
+   mongodb: 
+      image: mongo
+      container_name: 'mongo_tweepy'
+      ports:
+         - 27017:27017
+
+   twitter_stream_py:
+      build: tweepy_collector/
+      volumes:
+         - ./tweepy_collector/:/app
+      depends_on:
+         - mongodb
+
+   mypostgres:
+      image: postgres:13.0
+      container_name: 'mypostgres'
+      ports:
+         - "5555:5432"
+      environment:
+         - POSTGRES_USER=postgres
+         - POSTGRES_PASSWORD=postgres
+         - POSTGRES_DB=analyzed_tweets
+
+   etl:
+      build: etl/
+      volumes:
+         - ./etl/:/app
+      depends_on:
+         - mongodb
+         - mypostgres
+
+   slackbot:
+      build: slackbot/
+      volumes:
+         - ./slackbot/:/app
+      depends_on:
+         - mypostgres
+         - etl
