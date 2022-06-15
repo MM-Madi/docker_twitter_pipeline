@@ -16,7 +16,7 @@ This repository contains one of my projects as a data science student where I de
   **tweepy_collector.py** - script that uses the twitter-api to collect tweets with the hashtag Ukraine and stores them in a mongoDB database
 * etl:<br />
   **docker_file**<br />
-  **requierments,txt**<br />
+  **requierments.txt**<br />
   **etl.py** - script that connects to mongoDB data-base, extracts tweets, conducts sentiment analysis, and re-stores them in a postGres database
 * slackbot:<br />
   **docker_file**<br />
