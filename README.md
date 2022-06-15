@@ -1,4 +1,4 @@
-# twitter_docker_pipeline
+# Docker pipeline for tweet collection and analysis
 
 This repository contains one of my projects as a data science student where I developed a 5 docker container pipeline with the following functions:<br />
 **Container 1** - uses the twitter-api to collect tweets with a specific hashtag<br />
